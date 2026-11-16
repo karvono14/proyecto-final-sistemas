@@ -1,0 +1,11 @@
+
+services:
+  server:
+    build: ./server
+    environment:
+      GROUP_NAME: ${GROUP_NAME:?defina GROUP_NAME (ej. g3a)}
+      PUBLIC_URL: ${PUBLIC_URL:?defina PUBLIC_URL}
+      CENTRAL_URL: ${CENTRAL_URL:?defina CENTRAL_URL}
+    ports:
+      - "${HOST_PORT:-8000}:8000"
+
